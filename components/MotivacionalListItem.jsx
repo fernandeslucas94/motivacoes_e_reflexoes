@@ -1,15 +1,13 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
-
-// Data
-import Data from '../../src/data/motivacional';
+import { StyleSheet, Pressable, Text } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 // Styles
 const styles = StyleSheet.create({
     item: {
         backgroundColor: "#5B35B0",
-        width: 200,
-        height: 120,
+        width: 175,
+        height: 105,
         borderRadius: 12,
         marginHorizontal: 10,
         marginTop: 27,
@@ -26,12 +24,18 @@ const styles = StyleSheet.create({
     }
 })
  
-export default function ListItem(props) {
+export default function MotivacionalListItem(props) {
+    const navigation = useNavigation();
+
+    const handleNavigate = () => {
+        navigation.navigate("Frases Motivacionais");
+    }
+
     return (
         <>
-            <View style={styles.item} onPress={() => alert("Funcionou!")}>
+            <Pressable style={styles.item} onPress={handleNavigate}>
                 <Text style={styles.itemTitle}>{props.data.title}</Text>
-            </View>
+            </Pressable>
         </>
     )
 }

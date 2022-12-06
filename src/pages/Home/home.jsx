@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, View, FlatList, ScrollView, Pressable } from "react-native";
+import { SafeAreaView, Text, View, FlatList } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 // Styles
@@ -9,16 +9,18 @@ import Motivacionais from '../../data/motivacional';
 import Reflexoes from '../../data/reflexoes';
 
 // Components
-import ListItem from "../../../components/StatusBar/ListItem";
+import MotivacionalListItem from "../../../components/MotivacionalListItem";
+import ReflexoesListItem from "../../../components/ReflexoesListItem";
+import BottomNavigator from "../../../components/BottomNavigator/BottomNavigator";
 
 export default function HomeScreen() {
     return (
         <>
         <StatusBar style="light" backgroundColor="#5B35B0"/>
         <SafeAreaView style={styles.pageContainer}>
-            <Text style={styles.greeting}>Olá, bem vindo (a)!</Text>
+            {/* <Text style={styles.greeting}>Olá, bem vindo (a)!</Text> */}
             <Text style={styles.subtitle}>
-                Logo abaixo estão sugestões de reflexões e motivações para tornar seus dias mais leves, tranquilos e felizes!
+                Logo abaixo estão sugestões de reflexões e motivações para tornar seus dias mais leves, simples e tranquilos!
             </Text>
             <View style={styles.contentContainer}>
                 <Text style={styles.motivationTitle}>Frases Motivacionais</Text>
@@ -26,7 +28,7 @@ export default function HomeScreen() {
                     data={Motivacionais}
                     horizontal
                     showsHorizontalScrollIndicator={false}
-                    renderItem={({item}) => <ListItem data={item}/>}
+                    renderItem={({item}) => <MotivacionalListItem data={item}/>}
                     style={{flexGrow: 0, marginBottom: 20}}
                 />
 
@@ -35,11 +37,12 @@ export default function HomeScreen() {
                     data={Reflexoes}
                     horizontal
                     showsHorizontalScrollIndicator={false}
-                    renderItem={({item}) => <ListItem data={item}/>}
+                    renderItem={({item}) => <ReflexoesListItem data={item}/>}
                     style={{flexGrow: 0}}
                 />
             </View>
         </SafeAreaView>
+        <BottomNavigator />
         </>
     )
 }

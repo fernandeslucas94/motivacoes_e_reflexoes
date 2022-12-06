@@ -1,14 +1,48 @@
+import 'react-native-gesture-handler';
 import HomeScreen from './src/pages/Home/home';
-import { useFonts } from 'expo-font';
+import Motivacionais from './components/ItemsComponents/MotivacionalComponents/Motivacionais';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    'Inter-Black': require('./assets/fonts/Inter-Black.ttf'),
-    'Inter-Bold': require('./assets/fonts/Inter-Black.ttf'),
-    'Inter-SemiBold': require('./assets/fonts/Inter-Black.ttf'),
-    'Inter-Regular': require('./assets/fonts/Inter-Black.ttf'),
-    'Inter-Medium': require('./assets/fonts/Inter-Black.ttf'),
-    'Inter-Light': require('./assets/fonts/Inter-Black.ttf'),
-  });
-  return HomeScreen();
+
+  return (
+    <>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Home'
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "#6B38DE",
+        }
+      }}>
+        <Stack.Screen 
+        name="Olá, bem vindo (a)!" 
+        component={HomeScreen}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          headerShadowVisible: false,
+        }}/>
+        <Stack.Screen 
+        name="Frases Motivacionais" 
+        component={Motivacionais}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+    </>
+  )
 }

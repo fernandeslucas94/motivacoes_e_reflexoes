@@ -4,7 +4,7 @@ export default StyleSheet.create({
     pageContainer: {
         flex: 1,
         backgroundColor: '#6B38DE',
-        paddingTop: 65,
+        // paddingTop: 65,
     },
 
     greeting: {
@@ -17,10 +17,10 @@ export default StyleSheet.create({
 
     subtitle: {
         color: "#FFF",
-        paddingLeft: 20,
+        paddingLeft: 19,
         paddingRight: 10,
         fontSize: 17,
-        fontWeight: "500",
+        fontWeight: "700",
         marginBottom: 45,
     },
 
