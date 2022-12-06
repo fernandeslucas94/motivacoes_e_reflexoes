@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Pressable, Text } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 // Styles
 const styles = StyleSheet.create({
@@ -24,9 +25,15 @@ const styles = StyleSheet.create({
 })
  
 export default function ReflexoesListItem(props) {
+    const navigation = useNavigation();
+
+    const handleNavigate = () => {
+        navigation.navigate("Reflexões");
+    }
+
     return (
         <>
-            <Pressable style={styles.item}>
+            <Pressable style={styles.item} onPress={handleNavigate}>
                 <Text style={styles.itemTitle}>{props.data.title}</Text>
             </Pressable>
         </>

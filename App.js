@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import HomeScreen from './src/pages/Home/home';
 import Motivacionais from './components/ItemsComponents/MotivacionalComponents/Motivacionais';
+import Reflexoes from './components/ItemsComponents/ReflexoesComponents/Reflexoes';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -31,6 +32,19 @@ export default function App() {
         <Stack.Screen 
         name="Frases Motivacionais" 
         component={Motivacionais}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="Reflexões" 
+        component={Reflexoes}
         options={{
           headerTitleStyle: {
             color: "#FFF",
