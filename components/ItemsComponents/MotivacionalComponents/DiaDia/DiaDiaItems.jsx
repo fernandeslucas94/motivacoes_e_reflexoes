@@ -8,9 +8,7 @@ import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
 import DiaDia_Data from "./DiaDia_Data";
 
 export default function MotivacionaisConteudo(props) {
-
-
-
+    
 const HandleClick = (props) => {
 
 const title = props.data.title;

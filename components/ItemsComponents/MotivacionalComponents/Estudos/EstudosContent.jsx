@@ -2,7 +2,7 @@ import React from "react";
 import { Text, StyleSheet, View, FlatList, Pressable } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import EstudosData from './EstudosData';
+import EstudosData from "./EstudosData";
 import BottomNavigator from "../../../BottomNavigator/BottomNavigator";
 
 export default function MotivacionaisConteudo(props) {
@@ -12,7 +12,7 @@ export default function MotivacionaisConteudo(props) {
         const content = props.data.content;
         const navigation = useNavigation();
         const handleNavigate = () => {
-        navigation.navigate("TrabalhoContent", {title, content});
+        navigation.navigate("EstudosContent", {title, content});
     }
         return (
             <>
@@ -27,7 +27,7 @@ export default function MotivacionaisConteudo(props) {
         <>
             <StatusBar style="light" backgroundColor="#5B35B0"/>
             <View style={styles.pageContainer}>
-                <Text style={styles.title}>Estudos</Text>
+                <Text style={styles.title}>Trabalho</Text>
                 <FlatList 
                     data={EstudosData}
                     vertical

@@ -6,8 +6,12 @@ import DiaDia from './components/ItemsComponents/MotivacionalComponents/DiaDia/D
 import Trabalho from './components/ItemsComponents/MotivacionalComponents/Trabalho/TrabalhoItems';
 import Esporte from './components/ItemsComponents/MotivacionalComponents/Esporte/EsporteItems';
 import Estudos from './components/ItemsComponents/MotivacionalComponents/Estudos/EstudosItems';
-import AnimoDisposicao from './components/ItemsComponents/MotivacionalComponents/AnimoDisposicao/AnimoDisposicao';
+import AnimoDisposicao from './components/ItemsComponents/MotivacionalComponents/AnimoDisposicao/AnimoDisposicaoItems';
 import DiaDiaContent from './components/ItemsComponents/MotivacionalComponents/DiaDia/DiaDiaContent';
+import TrabalhoContent from './components/ItemsComponents/MotivacionalComponents/Trabalho/TrabalhoContent';
+import EsporteContent from './components/ItemsComponents/MotivacionalComponents/Esporte/EsporteContent';
+import EstudosContent from './components/ItemsComponents/MotivacionalComponents/Estudos/EstudosContent';
+import AnimoContent from './components/ItemsComponents/MotivacionalComponents/AnimoDisposicao/AnimoDisposicaoContent';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -137,6 +141,62 @@ export default function App() {
          <Stack.Screen 
         name="DiaDiaContent" 
         component={DiaDiaContent}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Frases Motivacionais",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="TrabalhoContent" 
+        component={TrabalhoContent}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Frases Motivacionais",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="EsporteContent" 
+        component={EsporteContent}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Frases Motivacionais",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="EstudosContent" 
+        component={EstudosContent}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Frases Motivacionais",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="AnimoContent" 
+        component={AnimoContent}
         options={{
           headerTitleStyle: {
             color: "#FFF",

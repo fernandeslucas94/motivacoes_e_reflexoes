@@ -2,7 +2,7 @@ import React from "react";
 import { Text, StyleSheet, View, FlatList, Pressable } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import EstudosData from './EstudosData';
+import EsportesData from "./EsportesData";
 import BottomNavigator from "../../../BottomNavigator/BottomNavigator";
 
 export default function MotivacionaisConteudo(props) {
@@ -27,9 +27,9 @@ export default function MotivacionaisConteudo(props) {
         <>
             <StatusBar style="light" backgroundColor="#5B35B0"/>
             <View style={styles.pageContainer}>
-                <Text style={styles.title}>Estudos</Text>
+                <Text style={styles.title}>Trabalho</Text>
                 <FlatList 
-                    data={EstudosData}
+                    data={EsportesData}
                     vertical
                     showsHorizontalScrollIndicator={false}
                     renderItem={({item}) => <HandleClick data={item}/>}

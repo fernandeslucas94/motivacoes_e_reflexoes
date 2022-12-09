@@ -2,34 +2,35 @@ import React from "react";
 import { Text, StyleSheet, View, FlatList, Pressable } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import EstudosData from './EstudosData';
-import BottomNavigator from "../../../BottomNavigator/BottomNavigator";
+import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
+import AnimoDisposicaoData from "./AnimoDisposicaoData";
 
 export default function MotivacionaisConteudo(props) {
-        const HandleClick = (props) => {
-
-        const title = props.data.title;
-        const content = props.data.content;
-        const navigation = useNavigation();
-        const handleNavigate = () => {
-        navigation.navigate("TrabalhoContent", {title, content});
-    }
-        return (
-            <>
-                <Pressable style={styles.item} onPress={handleNavigate}>
-                    <Text style={styles.itemTitle}>{title}</Text>
-                </Pressable>
-            </>
-        )
-    }
     
+    const HandleClick = (props) => {
+
+    const title = props.data.title;
+    const content = props.data.content;
+    const navigation = useNavigation();
+    const handleNavigate = () => {
+        navigation.navigate("AnimoContent", {title, content});
+    }
+    return (
+        <>
+            <Pressable style={styles.item} onPress={handleNavigate}>
+                <Text style={styles.itemTitle}>{title}</Text>
+            </Pressable>
+        </>
+    )
+}
+
     return (
         <>
             <StatusBar style="light" backgroundColor="#5B35B0"/>
             <View style={styles.pageContainer}>
-                <Text style={styles.title}>Estudos</Text>
+                <Text style={styles.title}>Animo e Disposição</Text>
                 <FlatList 
-                    data={EstudosData}
+                    data={AnimoDisposicaoData}
                     vertical
                     showsHorizontalScrollIndicator={false}
                     renderItem={({item}) => <HandleClick data={item}/>}

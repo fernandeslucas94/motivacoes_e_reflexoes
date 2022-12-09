@@ -1,12 +1,61 @@
 export default [
-    { id: 1, title: "No Labor Diário" },
-    { id: 2, title: ""},
-    { id: 3, title: ""},
-    { id: 4, title: ""},
-    { id: 5, title: ""},
-    { id: 6, title: ""},
-    { id: 7, title: ""},
-    { id: 8, title: ""},
-    { id: 9, title: ""},
-    { id: 10, title: ""},
+    { 
+        id: 1, 
+        title: "No Labor Diário", 
+        content: "Busquemos sempre sermos melhores a cada dia em nosso trabalho", 
+    },
+    
+    { 
+        id: 2, 
+        title: "Trabalho da Paz",
+        content: "Busquemos diariamente auxiliar na promoção da paz verdadeira em nossa vida e em nossa sociedade", 
+    },
+
+    { 
+        id: 3, 
+        title: "",
+        content: "", 
+    },
+
+    { 
+        id: 4, 
+        title: "",
+        content: "", 
+    },
+
+    { 
+        id: 5, 
+        title: "",
+        content: "", 
+    },
+
+    { 
+        id: 6, 
+        title: "",
+        content: "", 
+    },
+
+    { 
+        id: 7, 
+        title: "",
+        content: "", 
+    },
+
+    { 
+        id: 8, 
+        title: "",
+        content: "", 
+    },
+
+    { 
+        id: 9, 
+        title: "",
+        content: "", 
+    },
+
+    { 
+        id: 10, 
+        title: "",
+        content: "", 
+    },
 ]
