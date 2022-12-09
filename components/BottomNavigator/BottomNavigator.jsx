@@ -11,16 +11,16 @@ import SaveIcon from '../../assets/images/save.png';
 import AccountIcon from '../../assets/images/user.png';
 
 export default function BottomNavigator() {
-    // const navigation = useNavigation();
+    const navigation = useNavigation();
 
-    // const handleNavigate = () => {
-    //     navigation.navigate("Frases Motivacionais");
-    // }
+    const handleNavigate = () => {
+        navigation.navigate("Home");
+    }
 
     return (
         <>
             <View style={styles.navigatorContainer}>
-                <Pressable>
+                <Pressable onPress={handleNavigate}>
                     <Image source={HomeIcon} style={styles.icons}/>
                 </Pressable>
                 {/* <Pressable>

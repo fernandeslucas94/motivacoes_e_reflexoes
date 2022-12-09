@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, View, FlatList } from "react-native";
+import { SafeAreaView, Text, View, FlatList, ScrollView, Pressable } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 // Styles
@@ -13,6 +13,7 @@ import MotivacionalListItem from "../../../components/MotivacionalListItem";
 import ReflexoesListItem from "../../../components/ReflexoesListItem";
 import BottomNavigator from "../../../components/BottomNavigator/BottomNavigator";
 
+
 export default function HomeScreen() {
     return (
         <>
@@ -24,13 +25,17 @@ export default function HomeScreen() {
             </Text>
             <View style={styles.contentContainer}>
                 <Text style={styles.motivationTitle}>Frases Motivacionais</Text>
-                <FlatList 
+                {/* <FlatList 
                     data={Motivacionais}
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     renderItem={({item}) => <MotivacionalListItem data={item}/>}
                     style={{flexGrow: 0, marginBottom: 20}}
-                />
+                /> */}
+
+                <ScrollView horizontal style={{flexGrow: 0, marginBottom: 20}} showsHorizontalScrollIndicator={false}>
+                    <MotivacionalListItem />
+                </ScrollView>
 
                 <Text style={styles.motivationTitle}>Reflexões</Text>
                 <FlatList 

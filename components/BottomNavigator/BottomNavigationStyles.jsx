@@ -12,6 +12,8 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         flexDirection: 'row',
+        bottom: 0,
+        position: 'absolute'
     },
 
     icons: {

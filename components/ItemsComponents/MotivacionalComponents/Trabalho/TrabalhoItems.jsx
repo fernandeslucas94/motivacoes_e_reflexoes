@@ -1,22 +1,18 @@
 import React from "react";
 import { Text, StyleSheet, View, FlatList } from 'react-native';
-import { useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import MotivacionalItems from './MotivacionalItems';
-import MotivacionalData from "../../../src/data/MotivacionalContent/MotivacionalData";
-import MotivacionalListItem from "../../MotivacionalListItem";
+import MotivacionalItems from '../MotivacionalItems';
+
+import TrabalhoData from './TrabalhoData'
 
 export default function MotivacionaisConteudo(props) {
-    const route = useRoute();
-    const title = props.route.params?.title;
-
     return (
         <>
             <StatusBar style="light" backgroundColor="#5B35B0"/>
             <View style={styles.pageContainer}>
-                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.title}>Trabalho</Text>
                 <FlatList 
-                    data={MotivacionalData}
+                    data={TrabalhoData}
                     vertical
                     showsHorizontalScrollIndicator={false}
                     renderItem={({item}) => <MotivacionalItems data={item}/>}
@@ -32,14 +28,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        fontSize: 26,
+        fontSize: 27,
         fontWeight: '600',
-        color: '#000',
+        color: '#353535',
         marginTop: 20,
-        marginBottom: 20,
     },
     listItems: {
         flexGrow: 0,
-        height: "76%",
+        height: "78%"
     }
 })

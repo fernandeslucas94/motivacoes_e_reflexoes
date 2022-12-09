@@ -1,21 +1,18 @@
 import React from "react";
 import { Text, StyleSheet, View } from 'react-native';
 import { StatusBar } from "expo-status-bar";
+import { useRoute } from "@react-navigation/native";
 
 import reflexoes from '../../../src/data/reflexoes';
 
 export default function MotivacionaisConteudo(props) {
-    const HandleItem = () => {
-        for(let i = 0; i < reflexoes.length; i++) {
-            <Text>{reflexoes[i].title}</Text>
-        }
-    }
+    const route = useRoute();
 
     return (
         <>
             <StatusBar style="light" backgroundColor="#5B35B0"/>
             <View style={styles.pageContainer}>
-                <HandleItem />
+               
             </View>
         </>
     )
