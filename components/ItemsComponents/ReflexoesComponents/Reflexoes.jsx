@@ -3,16 +3,24 @@ import { Text, StyleSheet, View } from 'react-native';
 import { StatusBar } from "expo-status-bar";
 import { useRoute } from "@react-navigation/native";
 
-import reflexoes from '../../../src/data/reflexoes';
+// Components
+import ReflexoesItems from '../ReflexoesComponents/ReflexoesItems';
 
-export default function MotivacionaisConteudo(props) {
+export default function ReflexoesConteudo(props) {
     const route = useRoute();
 
     return (
         <>
             <StatusBar style="light" backgroundColor="#5B35B0"/>
             <View style={styles.pageContainer}>
-               
+            <Text style={styles.title}>{title}</Text>
+                <FlatList 
+                    data={MotivacionalData}
+                    vertical
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={({item}) => <ReflexoesItems data={item}/>}
+                    style={styles.listItems}
+                />
             </View>
         </>
     )

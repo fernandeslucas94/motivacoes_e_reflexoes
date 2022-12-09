@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
 import HomeScreen from './src/pages/Home/home';
+import AboutUs from './src/pages/AboutUs/AboutUs';
 import Motivacionais from './components/ItemsComponents/MotivacionalComponents/Motivacionais';
 import Reflexoes from './components/ItemsComponents/ReflexoesComponents/Reflexoes';
 import DiaDia from './components/ItemsComponents/MotivacionalComponents/DiaDia/DiaDiaItems';
@@ -12,6 +13,14 @@ import TrabalhoContent from './components/ItemsComponents/MotivacionalComponents
 import EsporteContent from './components/ItemsComponents/MotivacionalComponents/Esporte/EsporteContent';
 import EstudosContent from './components/ItemsComponents/MotivacionalComponents/Estudos/EstudosContent';
 import AnimoContent from './components/ItemsComponents/MotivacionalComponents/AnimoDisposicao/AnimoDisposicaoContent';
+import Filosoficas from './components/ItemsComponents/ReflexoesComponents/Filosoficas/FilosoficasItems';
+import FilosoficasContent from './components/ItemsComponents/ReflexoesComponents/Filosoficas/FilosoficasContent';
+import Biblicas from './components/ItemsComponents/ReflexoesComponents/Biblicas/BiblicasItems';
+import Pensadores from './components/ItemsComponents/ReflexoesComponents/Pensadores/PensadoresItems';
+import Espirituais from './components/ItemsComponents/ReflexoesComponents/Espirituais/EspirituaisItems';
+// import BiblicasContent from './components/ItemsComponents/ReflexoesComponents/Biblicas/BiblicasContent';
+// import PensadoresContent from './components/ItemsComponents/ReflexoesComponents/Pensadores/PensadoresContent';
+// import EspirituaisContent from './components/ItemsComponents/ReflexoesComponents/Espirituais/EspirituaisContent';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -38,6 +47,20 @@ export default function App() {
             fontSize: 24,
           },
           title: "Olá, seja bem vindo (a)!",
+          headerShadowVisible: false,
+          headerTintColor: "#FFF"
+        }}/>
+        <Stack.Screen 
+        name="About Us"
+        component={AboutUs}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          headerTitleAlign: 'center',
+          title: "Sobre Nós",
           headerShadowVisible: false,
           headerTintColor: "#FFF"
         }}/>
@@ -204,6 +227,76 @@ export default function App() {
             fontSize: 24,
           },
           title: "Frases Motivacionais",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="Filosóficas" 
+        component={Filosoficas}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Reflexões",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="FilosóficasContent" 
+        component={FilosoficasContent}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Reflexões",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="Biblicas" 
+        component={Biblicas}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Reflexões",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="Pensadores" 
+        component={Pensadores}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Reflexões",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
+        <Stack.Screen 
+        name="Espirituais" 
+        component={Espirituais}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Reflexões",
           headerTitleAlign: 'center',
           headerShadowVisible: false,
           headerTintColor: "#FFF",

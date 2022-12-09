@@ -4,7 +4,6 @@ export default StyleSheet.create({
     pageContainer: {
         flex: 1,
         backgroundColor: '#6B38DE',
-        // paddingTop: 65,
     },
 
     greeting: {

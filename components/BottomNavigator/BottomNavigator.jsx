@@ -12,21 +12,23 @@ import AccountIcon from '../../assets/images/user.png';
 
 export default function BottomNavigator() {
     const navigation = useNavigation();
-
-    const handleNavigate = () => {
+    const handleNavigateHome = () => {
         navigation.navigate("Home");
+    }
+    const handleNavigatAboutUs = () => {
+        navigation.navigate("About Us");
     }
 
     return (
         <>
             <View style={styles.navigatorContainer}>
-                <Pressable onPress={handleNavigate}>
+                <Pressable onPress={handleNavigateHome}>
                     <Image source={HomeIcon} style={styles.icons}/>
                 </Pressable>
                 {/* <Pressable>
                     <Image source={SaveIcon} style={styles.icons}/>
                 </Pressable> */}
-               <Pressable>
+               <Pressable onPress={handleNavigatAboutUs}>
                     <Image source={AccountIcon} style={styles.icons}/>
                </Pressable>
             </View>

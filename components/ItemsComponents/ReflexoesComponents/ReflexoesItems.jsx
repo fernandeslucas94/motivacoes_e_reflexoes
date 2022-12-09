@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Pressable, Text } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
  
-export default function MotivacionalItems(props) {
+export default function ReflexoesItems(props) {
     const navigation = useNavigation();
 
     const handleNavigate = () => {

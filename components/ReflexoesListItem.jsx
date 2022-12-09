@@ -2,6 +2,8 @@ import React from "react";
 import { StyleSheet, Pressable, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+import reflexoes from "../src/data/reflexoes";
+
 // Styles
 const styles = StyleSheet.create({
     item: {
@@ -26,15 +28,27 @@ const styles = StyleSheet.create({
  
 export default function ReflexoesListItem(props) {
     const navigation = useNavigation();
-
-    const handleNavigate = () => {
-        navigation.navigate("Reflexões");
-    }
+    const filosoficasNavigate = () => {navigation.navigate("Filosóficas")};
+    const biblicasNavigate = () => {navigation.navigate("Biblicas")};
+    const pensadoresNavigate = () => {navigation.navigate("Pensadores")};
+    const espirituaisNavigate = () => {navigation.navigate("Espirituais")};
 
     return (
         <>
-            <Pressable style={styles.item} onPress={handleNavigate}>
-                <Text style={styles.itemTitle}>{props.data.title}</Text>
+            <Pressable style={styles.item} onPress={filosoficasNavigate}>
+                <Text style={styles.itemTitle}>{reflexoes[0].title}</Text>
+            </Pressable>
+
+            <Pressable style={styles.item} onPress={biblicasNavigate}> 
+                <Text style={styles.itemTitle}>{reflexoes[1].title}</Text>
+            </Pressable>
+
+            <Pressable style={styles.item} onPress={pensadoresNavigate}>
+                <Text style={styles.itemTitle}>{reflexoes[2].title}</Text>
+            </Pressable>
+
+            <Pressable style={styles.item} onPress={espirituaisNavigate}>
+                <Text style={styles.itemTitle}>{reflexoes[3].title}</Text>
             </Pressable>
         </>
     )
