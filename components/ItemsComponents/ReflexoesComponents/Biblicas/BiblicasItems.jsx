@@ -6,15 +6,16 @@ import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
 
 import BiblicasData from './BiblicasData';
 
-export default function MotivacionaisConteudo(props) {
+export default function BiblicasConteudo(props) {
     
 const HandleClick = (props) => {
 
 const title = props.data.title;
 const content = props.data.content;
+const author = props.data.author;
 const navigation = useNavigation();
 const handleNavigate = () => {
-    navigation.navigate("FilosoficasContent", {title, content});
+    navigation.navigate("FilosoficasContent", {title, content, author});
 }
     return (
         <>
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
     },
     item: {
         backgroundColor: "#5B35B0",
-        width: 300,
+        width: 325,
         height: 75,
         borderRadius: 8,
         marginTop: 18,
@@ -71,5 +72,6 @@ const styles = StyleSheet.create({
         color: "#FFF",
         fontSize: 21,
         fontWeight: '500',
+        textAlign: 'center'
     }
 })

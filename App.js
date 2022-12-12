@@ -18,9 +18,9 @@ import FilosoficasContent from './components/ItemsComponents/ReflexoesComponents
 import Biblicas from './components/ItemsComponents/ReflexoesComponents/Biblicas/BiblicasItems';
 import Pensadores from './components/ItemsComponents/ReflexoesComponents/Pensadores/PensadoresItems';
 import Espirituais from './components/ItemsComponents/ReflexoesComponents/Espirituais/EspirituaisItems';
-// import BiblicasContent from './components/ItemsComponents/ReflexoesComponents/Biblicas/BiblicasContent';
-// import PensadoresContent from './components/ItemsComponents/ReflexoesComponents/Pensadores/PensadoresContent';
-// import EspirituaisContent from './components/ItemsComponents/ReflexoesComponents/Espirituais/EspirituaisContent';
+import BiblicasContent from './components/ItemsComponents/ReflexoesComponents/Biblicas/BiblicasContent';
+import PensadoresContent from './components/ItemsComponents/ReflexoesComponents/Pensadores/PensadoresContent';
+import EspirituaisContent from './components/ItemsComponents/ReflexoesComponents/Espirituais/EspirituaisContent';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -246,7 +246,7 @@ export default function App() {
           headerTintColor: "#FFF",
         }}/>
         <Stack.Screen 
-        name="FilosóficasContent" 
+        name="FilosoficasContent"
         component={FilosoficasContent}
         options={{
           headerTitleStyle: {
