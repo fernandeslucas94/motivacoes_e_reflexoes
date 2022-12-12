@@ -6,14 +6,15 @@ import EsportesData from "./EsportesData";
 import BottomNavigator from "../../../BottomNavigator/BottomNavigator";
 
 export default function MotivacionaisConteudo(props) {
-        const HandleClick = (props) => {
+    const HandleClick = (props) => {
 
-        const title = props.data.title;
-        const content = props.data.content;
-        const navigation = useNavigation();
-        const handleNavigate = () => {
-        navigation.navigate("TrabalhoContent", {title, content});
-    }
+    const title = props.data.title;
+    const content = props.data.content;
+    const author = props.data.author;
+    const navigation = useNavigation();
+    const handleNavigate = () => {
+    navigation.navigate("TrabalhoContent", {title, content, author});
+}
         return (
             <>
                 <Pressable style={styles.item} onPress={handleNavigate}>

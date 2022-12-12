@@ -11,9 +11,10 @@ export default function MotivacionaisConteudo(props) {
 
     const title = props.data.title;
     const content = props.data.content;
+    const author = props.data.author;
     const navigation = useNavigation();
     const handleNavigate = () => {
-        navigation.navigate("AnimoContent", {title, content});
+        navigation.navigate("AnimoContent", {title, content, author});
     }
     return (
         <>

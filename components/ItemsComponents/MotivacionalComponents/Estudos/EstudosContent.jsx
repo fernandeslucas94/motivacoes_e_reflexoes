@@ -2,39 +2,20 @@ import React from "react";
 import { Text, StyleSheet, View, FlatList, Pressable } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import EstudosData from "./EstudosData";
 import BottomNavigator from "../../../BottomNavigator/BottomNavigator";
 
 export default function MotivacionaisConteudo(props) {
-        const HandleClick = (props) => {
-
-        const title = props.data.title;
-        const content = props.data.content;
-        const navigation = useNavigation();
-        const handleNavigate = () => {
-        navigation.navigate("EstudosContent", {title, content});
-    }
-        return (
-            <>
-                <Pressable style={styles.item} onPress={handleNavigate}>
-                    <Text style={styles.itemTitle}>{title}</Text>
-                </Pressable>
-            </>
-        )
-    }
+    const route = useRoute();
+    const title = route.params?.title;
+    const content = route.params?.content;
+    const author = route.params?.author;
     
     return (
         <>
-            <StatusBar style="light" backgroundColor="#5B35B0"/>
-            <View style={styles.pageContainer}>
-                <Text style={styles.title}>Trabalho</Text>
-                <FlatList 
-                    data={EstudosData}
-                    vertical
-                    showsHorizontalScrollIndicator={false}
-                    renderItem={({item}) => <HandleClick data={item}/>}
-                    style={styles.listItems}
-                />
+           <View style={styles.pageContainer}>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.content}>{content}</Text>
+                <Text style={styles.author}>{author}</Text>
             </View>
             <BottomNavigator />
         </>
@@ -43,7 +24,10 @@ export default function MotivacionaisConteudo(props) {
 
 const styles = StyleSheet.create({
     pageContainer: {
-        alignItems: 'center',
+      alignItems: 'center',
+      paddingLeft: 15,
+      paddingRight: 15,
+      textAlign: 'justify',
     },
     title: {
         fontSize: 27,
@@ -51,23 +35,17 @@ const styles = StyleSheet.create({
         color: '#353535',
         marginTop: 20,
     },
-    listItems: {
-        flexGrow: 0,
-        height: "78%",
+    content: {
+        fontSize: 18,
+        fontWeight: '400',
+        marginTop: 30,
+        marginBottom: 21,
     },
-    item: {
-        backgroundColor: "#5B35B0",
-        width: 300,
-        height: 75,
-        borderRadius: 8,
-        marginTop: 18,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-
-    itemTitle: {
-        color: "#FFF",
-        fontSize: 21,
-        fontWeight: '500',
+    author: {
+        fontSize: 20,
+        fontWeight: '600',
+        borderBottomColor: '#CCC',
+        borderBottomWidth: 3,
+        paddingBottom: 3,
     }
 })

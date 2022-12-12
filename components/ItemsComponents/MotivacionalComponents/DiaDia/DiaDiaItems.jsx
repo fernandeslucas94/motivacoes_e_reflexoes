@@ -13,9 +13,10 @@ const HandleClick = (props) => {
 
 const title = props.data.title;
 const content = props.data.content;
+const author = props.data.author;
 const navigation = useNavigation();
 const handleNavigate = () => {
-    navigation.navigate("DiaDiaContent", {title, content});
+    navigation.navigate("DiaDiaContent", {title, content, author });
 }
     return (
         <>

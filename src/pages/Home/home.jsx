@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, View, FlatList, ScrollView, Pressable } from "react-native";
+import { SafeAreaView, Text, View, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 // Styles
