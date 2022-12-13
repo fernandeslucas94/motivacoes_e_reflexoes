@@ -3,23 +3,23 @@ import { useRoute, useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
 import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
 
-export default function DiaDiaContent() {
+export default function BiblicasContent() {
 const navigation = useNavigation();
 const route = useRoute();
 const title = route.params?.title;
 const content = route.params?.content;
 const author = route.params?.author;
 
-return (
-    <>
-        <View style={styles.pageContainer}>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.content}>{content}</Text>
-            <Text style={styles.author}>{author}</Text>
-        </View>
-        <BottomNavigator />
-    </>
-)
+    return (
+        <>
+            <View style={styles.pageContainer}>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.content}>{content}</Text>
+                <Text style={styles.author}>{author}</Text>
+            </View>
+            <BottomNavigator />
+        </>
+    )
 }
 
 const styles = StyleSheet.create({

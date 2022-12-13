@@ -6,15 +6,16 @@ import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
 
 import PensadoresData from './PensadoresData';
 
-export default function MotivacionaisConteudo(props) {
+export default function PensadoresConteudo(props) {
     
 const HandleClick = (props) => {
 
 const title = props.data.title;
 const content = props.data.content;
+const author = props.data.author;
 const navigation = useNavigation();
 const handleNavigate = () => {
-    navigation.navigate("FilosoficasContent", {title, content});
+    navigation.navigate("FilosoficasContent", {title, content, author});
 }
     return (
         <>

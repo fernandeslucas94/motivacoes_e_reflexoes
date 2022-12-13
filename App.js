@@ -301,6 +301,20 @@ export default function App() {
           headerShadowVisible: false,
           headerTintColor: "#FFF",
         }}/>
+        <Stack.Screen 
+        name="EspirituaisContent" 
+        component={EspirituaisContent}
+        options={{
+          headerTitleStyle: {
+            color: "#FFF",
+            fontWeight: "700",
+            fontSize: 24,
+          },
+          title: "Reflexões",
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          headerTintColor: "#FFF",
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
     </>

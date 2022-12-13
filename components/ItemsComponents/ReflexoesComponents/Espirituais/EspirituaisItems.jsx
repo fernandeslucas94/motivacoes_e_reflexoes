@@ -6,15 +6,16 @@ import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
 
 import EspirituaisData from './EspirituaisData';
 
-export default function MotivacionaisConteudo(props) {
+export default function EspirituaisConteudo(props) {
     
 const HandleClick = (props) => {
 
 const title = props.data.title;
 const content = props.data.content;
+const author = props.data.author;
 const navigation = useNavigation();
 const handleNavigate = () => {
-    navigation.navigate("FilosoficasContent", {title, content});
+    navigation.navigate("EspirituaisContent", {title, content, author});
 }
     return (
         <>
