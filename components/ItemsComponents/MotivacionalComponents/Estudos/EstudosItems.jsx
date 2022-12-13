@@ -4,6 +4,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import EstudosData from './EstudosData';
 import BottomNavigator from "../../../BottomNavigator/BottomNavigator";
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 export default function MotivacionaisConteudo(props) {
         const HandleClick = (props) => {
@@ -37,6 +38,13 @@ export default function MotivacionaisConteudo(props) {
                     style={styles.listItems}
                 />
             </View>
+            <BannerAd
+            unitId={TestIds.BANNER}
+            size={BannerAdSize.INLINE_ADAPTIVE_BANNER}
+            requestOptions={{
+                requestNonPersonalizedAdsOnly: true,
+            }}
+            />
             <BottomNavigator />
         </>
     )

@@ -4,6 +4,7 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import EsportesData from "./EsportesData";
 import BottomNavigator from "../../../BottomNavigator/BottomNavigator";
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 export default function MotivacionaisConteudo(props) {
     const route = useRoute();
@@ -40,6 +41,13 @@ export default function MotivacionaisConteudo(props) {
                     <Text style={styles.shareText}>Compartilhe</Text>
                 </Pressable>
             </View>
+            <BannerAd
+            unitId={TestIds.BANNER}
+            size={BannerAdSize.INLINE_ADAPTIVE_BANNER}
+            requestOptions={{
+                requestNonPersonalizedAdsOnly: true,
+            }}
+            />
             <BottomNavigator />
         </>
     )

@@ -4,6 +4,7 @@ export default StyleSheet.create({
     pageContainer: {
         flex: 1,
         backgroundColor: '#6B38DE',
+        justifyContent: 'space-between'
     },
 
     greeting: {

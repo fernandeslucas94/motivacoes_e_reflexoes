@@ -2,6 +2,7 @@ import React from 'react';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View, Pressable, Share } from 'react-native';
 import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 export default function AnimoContent() {
     const navigation = useNavigation();
@@ -39,6 +40,13 @@ export default function AnimoContent() {
                     <Text style={styles.shareText}>Compartilhe</Text>
                 </Pressable>
             </View>
+            <BannerAd
+            unitId={TestIds.BANNER}
+            size={BannerAdSize.INLINE_ADAPTIVE_BANNER}
+            requestOptions={{
+                requestNonPersonalizedAdsOnly: true,
+            }}
+            />
             <BottomNavigator />
         </>
     )

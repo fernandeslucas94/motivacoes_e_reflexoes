@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './AboutUsStyles';
 import BottomNavigator from '../../../components/BottomNavigator/BottomNavigator';
 import LogoImage from '../../../assets/images/logo-com-texto-escuro.png';
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 export default function AboutUs() {
     return (
@@ -21,6 +22,13 @@ export default function AboutUs() {
                     para todos que usufruam do aplicativo!
                 </Text>
             </View>
+            <BannerAd
+            unitId={TestIds.BANNER}
+            size={BannerAdSize.INLINE_ADAPTIVE_BANNER}
+            requestOptions={{
+                requestNonPersonalizedAdsOnly: true,
+            }}
+             />
             <BottomNavigator />
         </>
     )

@@ -13,7 +13,7 @@ export default StyleSheet.create({
         justifyContent: 'space-around',
         flexDirection: 'row',
         bottom: 0,
-        position: 'absolute'
+        marginTop: 'auto'
     },
 
     icons: {

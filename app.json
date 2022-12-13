@@ -18,16 +18,26 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lucasfernandes.MotivacoesEReflexoes"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/meditation.png",
         "backgroundColor": "#fff"
-      }
+      },
+      "package": "com.lucasfernandes.MotivacoesEReflexoes"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e2192324-07ae-45f1-8aff-d053c0391685"
+      }
     }
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-6506458857770558~3914564433"
   }
 }
