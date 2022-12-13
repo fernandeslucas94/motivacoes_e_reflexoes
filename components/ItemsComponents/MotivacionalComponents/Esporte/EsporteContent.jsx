@@ -1,15 +1,33 @@
 import React from "react";
-import { Text, StyleSheet, View, FlatList, Pressable } from 'react-native';
+import { Text, StyleSheet, View, Pressable, Share } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import EsportesData from "./EsportesData";
 import BottomNavigator from "../../../BottomNavigator/BottomNavigator";
 
 export default function MotivacionaisConteudo(props) {
-const route = useRoute();
-const title = route.params?.title;
-const content = route.params?.content;
-const author = route.params?.author;
+    const route = useRoute();
+    const title = route.params?.title;
+    const content = route.params?.content;
+    const author = route.params?.author;
+
+    const onShare = async () => {
+        try {
+        const result = await Share.share({
+            message:
+            `${title}
+            
+            ${content} 
+            
+            ${author}`,
+        });
+        if (result.action === Share.sharedAction) {
+            if (result.activityType) {} else {}
+        } else if (result.action === Share.dismissedAction) {}
+        } catch (error) {
+        alert(error.message);
+        }
+    };
 
     return (
         <>
@@ -17,6 +35,10 @@ const author = route.params?.author;
                 <Text style={styles.title}>{title}</Text>
                 <Text style={styles.content}>{content}</Text>
                 <Text style={styles.author}>{author}</Text>
+
+                <Pressable onPress={onShare} style={styles.share}>
+                    <Text style={styles.shareText}>Compartilhe</Text>
+                </Pressable>
             </View>
             <BottomNavigator />
         </>
@@ -48,5 +70,19 @@ const styles = StyleSheet.create({
         borderBottomColor: '#CCC',
         borderBottomWidth: 3,
         paddingBottom: 3,
+    },
+    share: {
+        width: "80%",
+        backgroundColor: "#5B35B0",
+        borderRadius: 5,
+        height: "16%",
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 55    
+    },
+    shareText: {
+        color: "#EEE",
+        fontWeight: "600",
+        fontSize: 18
     }
 })
