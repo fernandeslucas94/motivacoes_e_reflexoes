@@ -19,5 +19,12 @@ export default StyleSheet.create({
     icons: {
         width: 30,
         height: 30,
+        marginLeft: 4
+    },
+    iconsContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 80,
+        height: '100%'
     }
 })
