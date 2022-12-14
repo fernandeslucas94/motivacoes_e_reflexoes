@@ -16,6 +16,7 @@ export default StyleSheet.create({
         marginTop: 20,
         paddingLeft: 10,
         paddingRight: 10,
-        textAlign: 'justify'
+        textAlign: 'justify',
+        marginBottom: 10
     }
 });

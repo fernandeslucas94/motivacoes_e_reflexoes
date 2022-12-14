@@ -94,7 +94,7 @@ export default function App() {
         }}/>
         <Stack.Screen 
         name="Dia a Dia"
-        component={DiaDia}d
+        component={DiaDia}
         options={{
           headerTitleStyle: {
             color: "#FFF",

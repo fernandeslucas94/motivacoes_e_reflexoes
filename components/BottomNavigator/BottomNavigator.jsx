@@ -4,14 +4,14 @@ import styles from './BottomNavigationStyles'
 import { useNavigation } from "@react-navigation/native";
 import { InterstitialAd, TestIds, AdEventType } from 'react-native-google-mobile-ads';
 
-import Motivacionais from '../ItemsComponents/MotivacionalComponents/Motivacionais';
+const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-6506458857770558/5897869566';
 
 // Images
 import HomeIcon from '../../assets/images/home.png';
 import SaveIcon from '../../assets/images/save.png';
 import AccountIcon from '../../assets/images/user.png';
 
-const interstitial = InterstitialAd.createForAdRequest(TestIds.INTERSTITIAL, {
+const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
     requestNonPersonalizedAdsOnly: true
 });
 
@@ -19,6 +19,8 @@ export default function BottomNavigator() {
     const [interstitialLoaded, setinterstitialLoaded] = useState(false);
 
     const loadInterstitial = () => {
+        interstitial.load();
+
         const unsubscribeLoaded = interstitial.addAdEventListener(
             AdEventType.LOADED, 
             () => {
@@ -33,8 +35,6 @@ export default function BottomNavigator() {
                 interstitial.load();
             }
         );
-
-        interstitial.load();
 
         return () => {
             unsubscribeClosed();

@@ -5,6 +5,9 @@ import { StatusBar } from "expo-status-bar";
 import BottomNavigator from "../../../BottomNavigator/BottomNavigator";
 import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
+// Ads
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-6506458857770558~3914564433';
+
 export default function MotivacionaisConteudo(props) {
     const route = useRoute();
     const title = route.params?.title;
@@ -41,7 +44,7 @@ export default function MotivacionaisConteudo(props) {
                 </Pressable>
             </View>
             <BannerAd
-            unitId={TestIds.BANNER}
+            unitId={adUnitId}
             size={BannerAdSize.INLINE_ADAPTIVE_BANNER}
             requestOptions={{
                 requestNonPersonalizedAdsOnly: true,

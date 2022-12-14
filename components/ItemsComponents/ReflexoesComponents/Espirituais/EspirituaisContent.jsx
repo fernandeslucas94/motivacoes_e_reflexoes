@@ -4,6 +4,9 @@ import { StyleSheet, Text, View, Pressable, Share } from 'react-native';
 import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
 import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
+// Ads
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-6506458857770558~3914564433';
+
 export default function EspirituaisContent() {
     const navigation = useNavigation();
     const route = useRoute();
@@ -41,8 +44,8 @@ export default function EspirituaisContent() {
                 </Pressable>
             </View>
             <BannerAd
-            unitId={TestIds.BANNER}
-            size={BannerAdSize.INLINE_ADAPTIVE_BANNER}
+            unitId={adUnitId}
+            size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
             requestOptions={{
                 requestNonPersonalizedAdsOnly: true,
             }}

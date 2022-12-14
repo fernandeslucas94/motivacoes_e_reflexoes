@@ -24,7 +24,7 @@ export default function AboutUs() {
             </View>
             <BannerAd
             unitId={TestIds.BANNER}
-            size={BannerAdSize.INLINE_ADAPTIVE_BANNER}
+            size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
             requestOptions={{
                 requestNonPersonalizedAdsOnly: true,
             }}

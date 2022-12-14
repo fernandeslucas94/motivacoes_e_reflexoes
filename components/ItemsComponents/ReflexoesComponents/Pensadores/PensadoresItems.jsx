@@ -5,6 +5,9 @@ import { StatusBar } from "expo-status-bar";
 import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
 import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
+// Ads
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-6506458857770558~3914564433';
+
 import PensadoresData from './PensadoresData';
 
 export default function PensadoresConteudo(props) {
@@ -39,14 +42,14 @@ const handleNavigate = () => {
                     renderItem={({item}) => <HandleClick data={item}/>}
                     style={styles.listItems}
                 />
+                <BannerAd
+                unitId={adUnitId}
+                size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+                requestOptions={{
+                    requestNonPersonalizedAdsOnly: true,
+                }}
+                />
             </View>
-            <BannerAd
-            unitId={TestIds.BANNER}
-            size={BannerAdSize.INLINE_ADAPTIVE_BANNER}
-            requestOptions={{
-                requestNonPersonalizedAdsOnly: true,
-            }}
-            />
             <BottomNavigator />
         </>
     )
