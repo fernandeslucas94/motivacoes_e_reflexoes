@@ -6,7 +6,7 @@ import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
 import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
 // Ads
-const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-6506458857770558~3914564433';
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-6506458857770558/6290952933';
 
 import FilosoficasData from './FilosoficasData';
 

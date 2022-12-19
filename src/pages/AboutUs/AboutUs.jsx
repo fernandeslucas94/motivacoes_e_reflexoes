@@ -5,6 +5,8 @@ import BottomNavigator from '../../../components/BottomNavigator/BottomNavigator
 import LogoImage from '../../../assets/images/logo-com-texto-escuro.png';
 import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-6506458857770558/6290952933';
+
 export default function AboutUs() {
     return (
         <>
@@ -23,7 +25,7 @@ export default function AboutUs() {
                 </Text>
             </View>
             <BannerAd
-            unitId={TestIds.BANNER}
+            unitId={adUnitId}
             size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
             requestOptions={{
                 requestNonPersonalizedAdsOnly: true,

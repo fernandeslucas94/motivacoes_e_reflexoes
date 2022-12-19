@@ -22,6 +22,7 @@
       "bundleIdentifier": "com.lucasfernandes.MotivacoesEReflexoes"
     },
     "android": {
+      "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/meditation.png",
         "backgroundColor": "#fff"
