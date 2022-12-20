@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, View, FlatList, Pressable } from 'react-native';
+import { Text, StyleSheet, View, FlatList, Pressable, SafeAreaView } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import BottomNavigator from '../../../BottomNavigator/BottomNavigator';
@@ -32,6 +32,7 @@ export default function MotivacionaisConteudo(props) {
     return (
         <>
             <StatusBar style="light" backgroundColor="#5B35B0"/>
+            <SafeAreaView>
             <View style={styles.pageContainer}>
                 <Text style={styles.title}>Animo e Disposição</Text>
                 <FlatList 
@@ -41,14 +42,15 @@ export default function MotivacionaisConteudo(props) {
                     renderItem={({item}) => <HandleClick data={item}/>}
                     style={styles.listItems}
                 />
-                <BannerAd
+            </View>
+            </SafeAreaView>
+            <BannerAd
                 unitId={adUnitId}
-                size={BannerAdSize.INLINE_ADAPTIVE_BANNER}
+                size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
                 requestOptions={{
                     requestNonPersonalizedAdsOnly: true,
                 }}
-                />
-            </View>
+            />
             <BottomNavigator />
         </>
     )
@@ -66,7 +68,7 @@ const styles = StyleSheet.create({
     },
     listItems: {
         flexGrow: 0,
-        height: "78%",
+        height: "75%",
     },
     item: {
         backgroundColor: "#5B35B0",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, View, FlatList, Pressable } from 'react-native';
+import { Text, StyleSheet, View, FlatList, Pressable, SafeAreaView } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import MotivacionalItems from '../MotivacionalItems';
@@ -34,6 +34,7 @@ const handleNavigate = () => {
     return (
         <>
             <StatusBar style="light" backgroundColor="#5B35B0"/>
+            <SafeAreaView>
             <View style={styles.pageContainer}>
                 <Text style={styles.title}>Dia a Dia</Text>
                 <FlatList 
@@ -43,14 +44,15 @@ const handleNavigate = () => {
                     renderItem={({item}) => <HandleClick data={item}/>}
                     style={styles.listItems}
                 />
-                <BannerAd
+            </View>
+            <BannerAd
                 unitId={adUnitId}
                 size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
                 requestOptions={{
                     requestNonPersonalizedAdsOnly: true,
                 }}
-                />
-            </View>
+            />
+            </SafeAreaView>
             <BottomNavigator />
         </>
     )
@@ -68,7 +70,7 @@ const styles = StyleSheet.create({
     },
     listItems: {
         flexGrow: 0,
-        height: "78%",
+        height: "75%",
     },
     item: {
         backgroundColor: "#5B35B0",

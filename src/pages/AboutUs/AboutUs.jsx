@@ -17,12 +17,6 @@ export default function AboutUs() {
                     Nosso propósito é lhe auxiliar no dia a dia, para que você possa viver sua vida com mais tranquilidade, felicidade e paz, e assim, possa desfrutar de momentos prazerosos com amigos, 
                     família e consigo próprio! 
                 </Text>
-
-                <Text style={styles.description}>
-                    Desta forma, nós tivemos a idéia de desenvolver 
-                    este aplicativo, para que compartilhar com outras pessoas, reflexões, pensamentos, frases motivacionais que pudessem trazer benefícios 
-                    para todos que usufruam do aplicativo!
-                </Text>
             </View>
             <BannerAd
             unitId={adUnitId}
