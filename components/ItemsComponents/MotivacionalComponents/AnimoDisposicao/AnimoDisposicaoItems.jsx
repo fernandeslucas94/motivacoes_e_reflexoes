@@ -43,7 +43,6 @@ export default function MotivacionaisConteudo(props) {
                     style={styles.listItems}
                 />
             </View>
-            </SafeAreaView>
             <BannerAd
                 unitId={adUnitId}
                 size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
@@ -51,6 +50,7 @@ export default function MotivacionaisConteudo(props) {
                     requestNonPersonalizedAdsOnly: true,
                 }}
             />
+            </SafeAreaView>
             <BottomNavigator />
         </>
     )
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     },
     listItems: {
         flexGrow: 0,
-        height: "75%",
+        height: "77%",
     },
     item: {
         backgroundColor: "#5B35B0",

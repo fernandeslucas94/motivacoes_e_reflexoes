@@ -1,9 +1,5 @@
 import { SafeAreaView, Text, View, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
-
-// Ads
-const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-6506458857770558/6290952933';
 
 // Styles
 import styles from './homeStyling';
@@ -34,14 +30,6 @@ export default function HomeScreen() {
                 </ScrollView>
             </View>
         </SafeAreaView>
-        <BannerAd
-            unitId={adUnitId}
-            size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-            requestOptions={{
-                requestNonPersonalizedAdsOnly: true,
-            }}
-            />
-        <BottomNavigator />
         </>
     )
 }

@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     },
     listItems: {
         flexGrow: 0,
-        height: "75%",
+        height: "77%",
     },
     item: {
         backgroundColor: "#5B35B0",

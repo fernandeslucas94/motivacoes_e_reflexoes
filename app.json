@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "MotivacoesEReflexoes",
-    "slug": "MotivacoesEReflexoes",
-    "version": "1.1.1",
+    "name": "Motivacoes e Reflexoes",
+    "slug": "Motivacoes e Reflexoes",
+    "version": "1.1.4",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -22,7 +22,7 @@
       "bundleIdentifier": "com.lucasfernandes.MotivacoesEReflexoes"
     },
     "android": {
-      "versionCode": 8,
+      "versionCode": 11,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/meditation.png",
         "backgroundColor": "#fff"
