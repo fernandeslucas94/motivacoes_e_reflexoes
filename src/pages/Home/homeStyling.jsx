@@ -3,35 +3,47 @@ import { StyleSheet } from "react-native"
 export default StyleSheet.create({
     pageContainer: {
         flex: 1,
-        backgroundColor: '#6B38DE',
-        justifyContent: 'space-between'
+        backgroundColor: '#F5F5F5',
     },
-
-    greeting: {
-        color: '#FFF',
-        fontSize: 25,
-        fontWeight: 'bold',
-        paddingLeft: 20,
-        marginBottom: 10,
-    },
-
     subtitle: {
-        color: "#FFF",
-        paddingLeft: 19,
-        paddingRight: 10,
-        fontSize: 17,
+        color: "#434343",
+        paddingLeft: 17,
+        marginTop: 44,
+        fontSize: 24,
         fontWeight: "700",
-        marginBottom: 45,
     },
-
-    contentContainer: {
-        backgroundColor: "#FFF",
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        width: '100%',
+    item: {
+        width: '43%',
+        height: 90,
+        marginLeft: 17,
+        marginTop: 27,
+        borderRadius: 10,
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
+    itemImage: {
+        width: 30,
+        height: 30,
+    },
+    itemTitle: {
+        fontSize: 18,
+        fontWeight: '700',
+        color: '#54515B'
+    },
+    destaquesContainer: {
+        flexDirection: 'row',
+        height: '16%',
+    },
+    allContentContainer: {
         height: '100%',
     },
-
+    contentContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-end',
+        paddingBottom: 15,
+    },
     motivationTitle: {
         color: '#54515B',
         fontWeight: '800',

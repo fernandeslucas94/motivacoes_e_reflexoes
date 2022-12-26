@@ -1,14 +1,14 @@
 {
   "expo": {
     "name": "Motivacoes e Reflexoes",
-    "slug": "Motivacoes e Reflexoes",
-    "version": "1.1.4",
+    "slug": "MotivacoesEReflexoes",
+    "version": "1.1.6",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/images/splash-screen-motivacao.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#6B38DE"
     },
     "updates": {
@@ -22,7 +22,7 @@
       "bundleIdentifier": "com.lucasfernandes.MotivacoesEReflexoes"
     },
     "android": {
-      "versionCode": 11,
+      "versionCode": 13,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/meditation.png",
         "backgroundColor": "#fff"
