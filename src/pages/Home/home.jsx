@@ -13,10 +13,11 @@ export default function HomeScreen() {
             <StatusBar style="light" backgroundColor="#5B35B0"/>
             <SafeAreaView style={styles.pageContainer}>
                 <Text style={{
-                    fontSize: 19,
-                    fontWeight: '500',
+                    fontSize: 20,
+                    fontWeight: '600',
                     paddingLeft: 18,
-                    marginTop: 23
+                    marginTop: 23,
+                    color: "#434343"
                 }}>
                     Bem estar e positividade para seus dias!
                 </Text>
@@ -88,7 +89,7 @@ export default function HomeScreen() {
                             styles.item,
                         ]} onPress={() => console.log("Funcionou!")}>
                             <View style={styles.contentContainer}>
-                                <Text style={styles.itemTitle}>Positividade e Espiritual</Text>
+                                <Text style={styles.itemTitle}>Positividade</Text>
                                 <Image source={require('../../../assets/images/positividade.png')} style={styles.itemImage}/>
                             </View>
                         </Pressable>
@@ -100,7 +101,7 @@ export default function HomeScreen() {
                             styles.item,
                         ]} onPress={() => console.log("Funcionou!")}>
                             <View style={styles.contentContainer}>
-                                <Text style={styles.itemTitle}>Autoestima e Bem Estar</Text>
+                                <Text style={styles.itemTitle}>Autoestima</Text>
                                 <Image source={require('../../../assets/images/autoestima.png')} style={styles.itemImage}/>
                             </View>
                         </Pressable>
