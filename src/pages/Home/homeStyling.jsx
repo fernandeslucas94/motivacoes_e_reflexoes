@@ -35,7 +35,7 @@ export default StyleSheet.create({
         height: '16%',
     },
     allContentContainer: {
-        height: '100%',
+        width: '100%'
     },
     contentContainer: {
         flex: 1,
