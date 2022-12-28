@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Screens
 import HomeScreen from './src/pages/Home/home';
+import DisplayContent from './screens/DisplayContent';
 
 // Content Screens
 import MotivacoesContent from './screens/Motivacoes/Motivacoes';
@@ -64,6 +65,14 @@ export default function App() {
         <Stack.Screen 
         name="PositividadeContent"
         component={PositividadeContent}
+        options={{
+          headerTitleAlign: 'center',
+          title: "Conteúdo",
+          headerShadowVisible: false,
+        }}/>
+        <Stack.Screen 
+        name="DisplayContent"
+        component={DisplayContent}
         options={{
           headerTitleAlign: 'center',
           title: "Conteúdo",

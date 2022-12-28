@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, Text, View, FlatList } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 
